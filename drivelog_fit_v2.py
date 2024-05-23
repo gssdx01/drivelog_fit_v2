@@ -48,7 +48,7 @@ start_km = st.number_input('出発時距離を入力してください')
 back_km = st.number_input('帰社時距離を入力してください') 
 dist_km = st.number_input('今回走行距離を入力してください')  
 highway = st.selectbox('高速使用の有無を選択してください', ('あり', 'なし'))
-checkup = st.selectbox('点検結果を選択してください', ('異常あり', '異常無し'))
+checkup = st.selectbox('点検結果を選択してください', ('異常無し', '異常あり'))
 error = st.text_input('異常内容を入力してください')
 gas = st.selectbox('残燃料を選択してください', ('満タン', '3/4', '1/2', '1/4'))
 
@@ -116,7 +116,7 @@ try:
                     back_km = st.number_input('帰社時距離を入力してください', value=row[9], key='edit_back_km')
                     dist_km = st.number_input('今回走行距離を入力してください', value=row[10], key='edit_dist_km')
                     highway = st.selectbox('高速使用の有無を選択してください', ('あり', 'なし'), index=('あり', 'なし').index(row[11]), key='edit_highway')
-                    checkup = st.selectbox('点検結果を選択してください', ('異常あり', '異常無し'), index=('異常あり', '異常無し').index(row[12]), key='edit_checkup')
+                    checkup = st.selectbox('点検結果を選択してください', ('異常無し', '異常あり'), index=('異常無し', '異常あり').index(row[12]), key='edit_checkup')
                     error = st.text_input('異常内容を入力してください', value=row[13], key='edit_error')
                     gas = st.selectbox('残燃料を選択してください', ('満タン', '3/4', '1/2', '1/4'), index=('満タン', '3/4', '1/2', '1/4').index(row[14]), key='edit_gas')
 
